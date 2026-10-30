@@ -1,8 +1,9 @@
 import { p } from "../i18n/p";
 // All images are resolved here. To use your own banner, drop ONE file into src/assets/banner/
 const banners = import.meta.glob('../assets/banner/*.{jpg,jpeg,png,webp}', { eager: true, query: '?url', import: 'default' })
+ 
 const customBanner = Object.values(banners)[0]
-export const img = (n) => new URL(`../assets/exhibition/${n}.jpg`, import.meta.url).href
+export const img = (n) => new URL(`../assets/exhibition/${n}.png`, import.meta.url).href
 export const hasCustomBanner = Boolean(customBanner)
 export const experienceImages = [
   'https://i.pinimg.com/736x/f5/3a/a7/f53aa780ce53d921089ef750a317d63d.jpg',
@@ -33,6 +34,8 @@ export const gallery = [
 //     alt: p('Community participation', 'सामुदायिक सहभागिता'),
 //   },
 ]
+
+const heroBg = new URL('../assets/banner/banner.png', import.meta.url).href
 export const images = { hero: customBanner || img('hero'), about: img('about'), stall: img('stall'), location: img('location') }
 
 // Product and artisan photos: look up by file name inside src/assets/products and src/assets/artisans
@@ -41,7 +44,7 @@ const prod = import.meta.glob("../assets/products/*.{jpg,jpeg,png,webp}", {
   query: "?url",
   import: "default",
 });
-const art = import.meta.glob("../assets/artisans/*.{jpg,jpeg,png,webp}", {
+const art = import.meta.glob("../assets/artisans/*.{jpg,jpeg,png,webp,avif}", {
   eager: true,
   query: "?url",
   import: "default",
