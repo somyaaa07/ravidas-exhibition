@@ -5,7 +5,13 @@ const banners = import.meta.glob('../assets/banner/*.{jpg,jpeg,png,webp}', { eag
 const customBanner = Object.values(banners)[0]
 export const img = (n) => new URL(`../assets/exhibition/${n}.png`, import.meta.url).href
 export const hasCustomBanner = Boolean(customBanner)
-export const experienceImages = [1,2,3,4,5].map((n) => img('card' + n))
+export const experienceImages = [
+  'https://i.pinimg.com/736x/f5/3a/a7/f53aa780ce53d921089ef750a317d63d.jpg',
+  'https://i.pinimg.com/1200x/3f/4c/9d/3f4c9d51c15421044ced280627e48e7d.jpg',
+  'https://i.pinimg.com/736x/7f/f7/91/7ff7919b27ebb223908f748428ad3b56.jpg',
+  'https://i.pinimg.com/1200x/7a/7e/56/7a7e568645e4292221b548958c79723a.jpg',
+  'https://i.pinimg.com/736x/a2/4c/41/a24c41e40a606f399ab9d6f392cfb9b6.jpg',
+]
 export const gallery = [
   {
     src: 'https://i.pinimg.com/736x/fa/0d/ed/fa0ded0cecc44d44994959eeeca51dd7.jpg',

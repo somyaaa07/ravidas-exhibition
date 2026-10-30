@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5 md:gap-4 lg:px-6">
-         <div className="relative z-10 flex h-14 shrink-0 items-center">
+         <div className="relative z-10 flex h-14 w-20 shrink-0 items-center">
       <Logo />
     </div>
 

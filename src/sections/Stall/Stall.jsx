@@ -15,7 +15,7 @@ export default function Stall() {
       <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">{t(s.body)}</p>
       <ul className="mt-5 space-y-2 text-sm">{facilities.map(f => <li key={f.en} className="flex items-center gap-3"><span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-secondary text-white"><Check size={12} /></span>{t(f)}</li>)}</ul>
       <a href="#register" className="btn btn-primary mt-7">{t(s.cta)} <ArrowRight size={16} /></a></Reveal>
-    <Reveal delay={.1} className="relative"><img loading="lazy" src={images.stall} alt={t(s.alt)} className="w-full rounded-lg shadow-2xl" />
+    <Reveal delay={.1} className="relative"><img loading="lazy" src="https://i.pinimg.com/1200x/2f/3f/45/2f3f4524dbff53060c8f6b99ae817e76.jpg" alt={t(s.alt)} className="w-full rounded-lg shadow-2xl aspect-7/5" />
       <Lotus className="pointer-events-none absolute -bottom-10 -left-10 hidden h-44 w-44 text-border sm:block lg:-left-52" sw={.8} />
       <p className="mt-3 text-right font-heading italic text-secondary">{t(s.tagline)}</p></Reveal>
   </div></section>)
