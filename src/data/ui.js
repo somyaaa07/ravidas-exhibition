@@ -66,7 +66,7 @@ export const ui = {
     quote: p("Let's come together to celebrate the message of Sant Ravidas Ji.", 'आइए, संत रविदास जी के संदेश का उत्सव साथ मिलकर मनाएँ।'),
     alt: p('Varanasi ghats at sunset with boats', 'सूर्यास्त के समय नावों के साथ वाराणसी के घाट'),
   },
-  footer: { tagline: p('Equality | Humanity | Harmony', 'समानता | मानवता | समरसता'), rights: p('© 2025 Sant Ravidas Ji Exhibition. All rights reserved.', '© 2025 संत रविदास जी प्रदर्शनी। सर्वाधिकार सुरक्षित।') },
+  footer: { tagline: p('Equality | Humanity | Harmony', 'समानता | मानवता | समरसता'), rights: p('© 2026 Sant Ravidas Ji Exhibition. All rights reserved.', '© 2025 संत रविदास जी प्रदर्शनी। सर्वाधिकार सुरक्षित।') },
   reg: {
     label: p('STALL REGISTRATION', 'स्टॉल पंजीकरण'), title: p('Register for Stall / Tent', 'स्टॉल / टेंट के लिए पंजीकरण'),
     sub: p('Three short steps. You can review everything before sending.', 'तीन छोटे चरण। भेजने से पहले सब कुछ जाँच सकते हैं।'),

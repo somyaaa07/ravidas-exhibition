@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Desktop navigation */}
         <nav
           aria-label="Main"
-          className="hidden items-center gap-3 text-[10px] lg:flex xl:gap-6 xl:text-[13px]"
+          className="hidden items-center gap-3 text-[10px] lg:flex xl:gap-6 xl:text-[13px] ml-12"
         >
           {navLinks.map(([label, id], i) => (
             <a
