@@ -22,8 +22,8 @@ export default function Products() {
         className={`rounded-full border px-4 py-2 text-sm transition ${cat === c.id ? 'border-primary bg-primary text-surface' : 'border-border bg-white hover:border-secondary'}`}>{t(c.label)}</button>))}</div>
     <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{list.map(x => (
       <article key={x.id} className="card flex flex-col overflow-hidden">
-        <div className="relative aspect-square"><MediaImage src={productImage(x.image)} alt={t(x.name)} icon={Package} label={t(pr.photo)} />
-          {x.sample && <span className="absolute left-3 top-3 rounded-full bg-surface/90 px-2.5 py-0.5 text-[11px] text-muted">{t(ui.common.sample)}</span>}</div>
+        <div className="relative aspect-square"><MediaImage src={/^https?:\/\//.test(x.image || '') ? x.image : productImage(x.image)} alt={t(x.name)} icon={Package} label={t(pr.photo)} className='aspect-7/5'/>
+         </div>
         <div className="flex flex-1 flex-col p-5">
           <h3 className="font-heading text-lg leading-snug text-primary">{t(x.name)}</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted">{t(x.description)}</p>
