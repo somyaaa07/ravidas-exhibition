@@ -8,7 +8,7 @@ import Reveal from '../../components/animation/Reveal'
 export default function Exhibition() {
   const { t } = useLang(), x = ui.exhibition
   return (<section id="exhibition" className="relative overflow-hidden bg-background py-16">
-    <Temple className="pointer-events-none absolute -left-4 top-8 h-56 text-border sm:left-8" />
+    {/* <Temple className="pointer-events-none absolute -left-4 top-8 h-56 text-border sm:left-8" /> */}
     <div className="relative mx-auto max-w-7xl px-5">
       <Reveal className="text-center"><p className="text-xs tracking-widest text-secondary">{t(x.label)}</p>
         <h2 className="font-heading text-4xl text-primary">{t(x.title)}</h2>
