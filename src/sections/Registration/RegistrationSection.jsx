@@ -8,7 +8,7 @@ import SuccessPanel from './SuccessPanel'
 
 export default function Registration() {
   const form = useRegistrationForm(), { t } = useLang(), r = ui.reg
-  return (<section id="register" className="bg-surface py-16"><div className="mx-auto max-w-7xl px-10">
+  return (<section id="register" className="bg-surface py-16"><div className="mx-auto max-w-7xl px-5 ">
     <Reveal className="mb-8 text-center"><p className="text-xs tracking-widest text-secondary">{t(r.label)}</p>
       <h2 className="font-heading text-4xl text-primary">{t(r.title)}</h2>
       <p className="mx-auto mt-2 max-w-lg text-sm text-muted">{t(r.sub)}</p></Reveal>
