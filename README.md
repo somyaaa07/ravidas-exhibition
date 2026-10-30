@@ -27,3 +27,10 @@ src/
   utils/       validation.js
   styles/      index.css
 ```
+
+## Languages (English / हिन्दी)
+A toggle in the navbar switches the whole site. Every text is a pair: `p('English', 'हिन्दी')` (see `src/i18n/p.js`).
+- Fixed page text: `src/data/ui.js` · Menu: `navigation.js` · Event: `event.js` · Cards/lists: `content.js`
+- Artisans: `src/data/artisans.js` (photos in `src/assets/artisans/`) · Products: `src/data/products.js` (photos in `src/assets/products/`)
+- Set `sample: false` (or delete it) on an item to remove its "Sample" badge. Sample artisans/products/prices are placeholders.
+- To add a third language: add it in `src/i18n/LanguageContext.jsx` (`LANGS`) and add a key to each `p()` pair.

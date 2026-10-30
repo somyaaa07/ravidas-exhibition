@@ -2,7 +2,7 @@
 @theme {
   --color-primary:#5B1712; --color-secondary:#A66A32; --color-background:#F5EBDD; --color-surface:#FFF9EF;
   --color-dark:#32140F; --color-text:#321C15; --color-muted:#6E5746; --color-border:#D9B98C;
-  --font-heading:"Marcellus",serif; --font-sans:"Poppins",sans-serif;
+  --font-heading:"Marcellus","Noto Serif Devanagari",serif; --font-sans:"Poppins","Noto Sans Devanagari",sans-serif;
 }
 html{scroll-behavior:smooth;scroll-padding-top:72px}
 body{background:var(--color-background);color:var(--color-text);font-family:var(--font-sans);overflow-x:hidden}
@@ -14,3 +14,6 @@ body{background:var(--color-background);color:var(--color-text);font-family:var(
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #5b171220}
 :focus-visible{outline:2px solid var(--color-secondary);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Hindi: Devanagari needs looser line-height and no letter-spacing */
+:lang(hi) body{line-height:1.75}
+:lang(hi) [class*="tracking-"]{letter-spacing:0}

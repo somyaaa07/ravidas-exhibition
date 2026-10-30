@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { initialValues, registrationSteps } from '../data/registration'
 import { validateField, validateStep, hasErrors } from '../utils/validation'
+import { useLang } from '../i18n/LanguageContext'
+import { ui } from '../data/ui'
 import { submitRegistration } from '../services/submitRegistration'
 
 export default function useRegistrationForm() {
+  const { lang } = useLang()
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
   const [stepIndex, setStepIndex] = useState(0)
@@ -23,8 +26,8 @@ export default function useRegistrationForm() {
   const goTo = i => i < stepIndex && setStepIndex(i)
   const submit = async () => {
     setStatus({ state: 'loading', message: '' })
-    try { await submitRegistration(values); setStatus({ state: 'success', message: '' }) }
-    catch (e) { setStatus({ state: 'error', message: e.message }) }
+    try { await submitRegistration({ ...values, language: lang }); setStatus({ state: 'success', message: '' }) }
+    catch (e) { setStatus({ state: 'error', message: e.code === 'not-connected' ? ui.reg.notConnected : ui.reg.failed }) }
   }
   const reset = () => { setValues(initialValues); setErrors({}); setStepIndex(0); setStatus({ state: 'idle', message: '' }) }
   return { values, errors, step, stepIndex, status, setValue, blur, next, back, goTo, submit, reset }
