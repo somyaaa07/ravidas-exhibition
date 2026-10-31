@@ -39,6 +39,7 @@
 // }
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import {
   Package,
   Ruler,
@@ -58,7 +59,8 @@ import { useLang } from "../../i18n/LanguageContext";
 import MediaImage from "../../components/ui/MediaImage";
 import Reveal from "../../components/animation/Reveal";
 
-const ITEMS_PER_PAGE = 12;
+const ITEMS_PER_PAGE = 8;
+const EASE = [0.22, 1, 0.36, 1];
 
 export default function Products() {
   const { t } = useLang();
@@ -112,31 +114,45 @@ export default function Products() {
           </p>
         </Reveal>
 
-        {/* Category Filters */}
+        {/* Category Filters: single scroll row on all devices (scrollbar visible from sm up) */}
         <div
           role="group"
           aria-label={t(pr.filter)}
-          className="mt-6 flex flex-wrap justify-center gap-1.5 sm:mt-8 sm:gap-2"
+          className="-mx-3 mt-6 flex gap-1.5 overflow-x-auto px-3 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:mt-8 sm:gap-2 sm:px-0 sm:pb-3 sm:[scrollbar-color:#C9B8A6_transparent] sm:[scrollbar-width:thin]"
         >
-          {chips.map((c) => (
-            <button
+          {chips.map((c, i) => (
+            <motion.button
               key={c.id}
               type="button"
               aria-pressed={cat === c.id}
               onClick={() => handleCategoryChange(c.id)}
-              className={`rounded-full border px-3 py-1.5 text-xs transition sm:px-4 sm:py-2 sm:text-sm ${
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.4, delay: i * 0.05, ease: EASE },
+              }}
+              whileTap={{ scale: 0.95 }}
+              viewport={{ once: true }}
+              className={`shrink-0 whitespace-nowrap rounded-full border px-3 py-1.5 text-xs transition-colors first:ml-auto last:mr-auto sm:px-4 sm:py-2 sm:text-sm ${
                 cat === c.id
                   ? "border-primary bg-primary text-surface"
                   : "border-border bg-white hover:border-secondary"
               }`}
             >
               {t(c.label)}
-            </button>
+            </motion.button>
           ))}
         </div>
 
         {/* Product Count */}
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-2 sm:mt-7">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: EASE }}
+          className="mt-4 flex flex-wrap items-center justify-between gap-2 sm:mt-7"
+        >
           <p className="text-xs text-muted sm:text-sm">
             {t({
               en: `Showing ${currentProducts.length} of ${filteredProducts.length} products`,
@@ -144,18 +160,27 @@ export default function Products() {
             })}
           </p>
 
-          <span className="flex items-center gap-1 text-[11px] font-medium text-secondary sm:text-xs">
-            <BadgeCheck size={14} />
-            GI Tagged
-          </span>
-        </div>
+          
+        </motion.div>
 
         {/* Product Cards */}
         <div className="mt-4 grid grid-cols-2 gap-3 sm:mt-5 sm:gap-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-5">
-          {currentProducts.map((x) => (
-            <article
+          {currentProducts.map((x, index) => (
+            <motion.article
               key={x.id}
-              className="card flex min-w-0 flex-col overflow-hidden"
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: {
+                  duration: 0.55,
+                  delay: (index % 4) * 0.08,
+                  ease: EASE,
+                },
+              }}
+              whileHover={{ y: -4, transition: { duration: 0.25 } }}
+              viewport={{ once: true, amount: 0.15 }}
+              className="card group flex min-w-0 flex-col overflow-hidden"
             >
               {/* Product Image */}
               <div className="relative aspect-[4/3] overflow-hidden bg-[#F5EBDD]">
@@ -170,7 +195,7 @@ export default function Products() {
                   alt={t(x.name)}
                   icon={Package}
                   label={t(pr.photo)}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
 
@@ -230,18 +255,25 @@ export default function Products() {
                   </a>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
 
         {/* Pagination */}
         {totalPages > 1 && (
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:mt-10 sm:gap-2">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, ease: EASE }}
+            className="mt-8 flex flex-wrap items-center justify-center gap-1.5 sm:mt-10 sm:gap-2"
+          >
             {/* Previous */}
-            <button
+            <motion.button
               type="button"
               disabled={page === 1}
               onClick={() => setPage((prev) => prev - 1)}
+              whileTap={page === 1 ? undefined : { scale: 0.93 }}
               aria-label={t({ en: "Previous", hi: "पिछला" })}
               className="flex h-9 items-center gap-1 rounded-md border border-border px-2.5 text-sm transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:px-3"
             >
@@ -249,32 +281,34 @@ export default function Products() {
               <span className="hidden sm:inline">
                 {t({ en: "Previous", hi: "पिछला" })}
               </span>
-            </button>
+            </motion.button>
 
             {/* Page Numbers */}
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(
               (pageNumber) => (
-                <button
+                <motion.button
                   key={pageNumber}
                   type="button"
                   aria-current={page === pageNumber ? "page" : undefined}
                   onClick={() => setPage(pageNumber)}
-                  className={`h-9 min-w-9 rounded-md border px-2.5 text-sm transition sm:h-10 sm:min-w-10 sm:px-3 ${
+                  whileTap={{ scale: 0.93 }}
+                  className={`h-9 min-w-9 rounded-md border px-2.5 text-sm transition-colors sm:h-10 sm:min-w-10 sm:px-3 ${
                     page === pageNumber
                       ? "border-primary bg-primary text-white"
                       : "border-border hover:border-primary hover:text-primary"
                   }`}
                 >
                   {pageNumber}
-                </button>
+                </motion.button>
               ),
             )}
 
             {/* Next */}
-            <button
+            <motion.button
               type="button"
               disabled={page === totalPages}
               onClick={() => setPage((prev) => prev + 1)}
+              whileTap={page === totalPages ? undefined : { scale: 0.93 }}
               aria-label={t({ en: "Next", hi: "अगला" })}
               className="flex h-9 items-center gap-1 rounded-md border border-border px-2.5 text-sm transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:px-3"
             >
@@ -282,8 +316,8 @@ export default function Products() {
                 {t({ en: "Next", hi: "अगला" })}
               </span>
               <ChevronRight size={16} />
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         )}
 
         {/* Page Information */}
