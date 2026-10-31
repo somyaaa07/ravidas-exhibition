@@ -3,7 +3,7 @@ import { p } from '../i18n/p'
 export const ui = {
   meta: { title: p('Sant Ravidas Jayanti Mahotsav | Stall & Tent Booking, Varanasi', 'संत रविदास जयंती महोत्सव | स्टॉल व टेंट बुकिंग, वाराणसी') },
   common: {
-    brand1: p('Sant Ravidas Jayanti', 'संत रविदास जयंती'), brand2: p('Exhibition', 'प्रदर्शनी'),
+    brand1: p('Sant Ravidas Jayanti', 'संत रविदास जयंती'), brand2: p('Exhibition', 'महोत्सव'),
     registerShort: p('Register for Stall', 'स्टॉल पंजीकरण'), optional: p('Optional', 'वैकल्पिक'),
     menu: p('Toggle menu', 'मेनू खोलें / बंद करें'), sample: p('Sample', 'नमूना'),
   },
@@ -38,7 +38,7 @@ export const ui = {
     label: p('PRODUCT CATALOGUE', 'उत्पाद सूची'), title: p('Handcrafted Products', 'हस्तनिर्मित उत्पाद'),
     sub: p('A selection of items you can find at the exhibition.', 'महोत्सव में उपलब्ध वस्तुओं का चयन।'),
     all: p('All', 'सभी'), size: p('Size', 'आकार'), weight: p('Weight', 'वजन'), price: p('Price', 'मूल्य'),
-    enquire: p('Enquire', 'पूछताछ करें'), note: p('Prices are indicative and may change. Final rates are confirmed at the exhibition.', 'मूल्य सांकेतिक हैं और बदल सकते हैं। अंतिम दरें प्रदर्शनी में तय होंगी।'),
+    enquire: p('Enquire', 'पूछताछ करें'), note: p('Prices are indicative and may change. Final rates are confirmed at the exhibition.', 'मूल्य सांकेतिक हैं और बदल सकते हैं। अंतिम दरें महोत्सव में तय होंगी।'),
     filter: p('Filter products by category', 'श्रेणी के अनुसार उत्पाद छाँटें'), photo: p('Photo coming soon', 'फोटो जल्द उपलब्ध'),
     mailSubject: p('Product enquiry', 'उत्पाद पूछताछ'),
   },
@@ -66,7 +66,7 @@ export const ui = {
     quote: p("Let's come together to celebrate the message of Sant Ravidas Ji.", 'आइए, संत रविदास जी के संदेश का उत्सव साथ मिलकर मनाएँ।'),
     alt: p('Varanasi ghats at sunset with boats', 'सूर्यास्त के समय नावों के साथ वाराणसी के घाट'),
   },
-  footer: { tagline: p('Equality | Humanity | Harmony', 'समानता | मानवता | समरसता'), rights: p('© 2026 Sant Ravidas Ji Exhibition. All rights reserved.', '© 2025 संत रविदास जी महोत्सव। सर्वाधिकार सुरक्षित।') },
+  footer: { tagline: p('Equality | Humanity | Harmony', 'समानता | मानवता | समरसता'), rights: p('© 2026 Sant Ravidas Ji Exhibition. All rights reserved.', '© 2026 संत रविदास जी महोत्सव। सर्वाधिकार सुरक्षित।') },
   reg: {
     label: p('STALL REGISTRATION', 'स्टॉल पंजीकरण'), title: p('Register for Stall / Tent', 'स्टॉल / टेंट के लिए पंजीकरण'),
     sub: p('Three short steps. You can review everything before sending.', 'तीन छोटे चरण। भेजने से पहले सब कुछ जाँच सकते हैं।'),
