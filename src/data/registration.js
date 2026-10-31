@@ -22,5 +22,5 @@ export const benefits = [p('Spacious stall and tent areas', 'विशाल स
 export const howItWorks = [
   [p('Send your request', 'अपना अनुरोध भेजें'), p('Fill in the short form — it takes about two minutes.', 'छोटा फ़ॉर्म भरें — लगभग दो मिनट लगते हैं।')],
   [p('We get in touch', 'हम संपर्क करेंगे'), p('The organising team contacts you to discuss availability.', 'आयोजन समिति उपलब्धता पर चर्चा के लिए संपर्क करेगी।')],
-  [p('Confirm and set up', 'पुष्टि करें और लगाएँ'), p('Receive your stall details and join the exhibition.', 'स्टॉल का विवरण पाएँ और प्रदर्शनी से जुड़ें।')],
+  [p('Confirm and set up', 'पुष्टि करें और लगाएँ'), p('Receive your stall details and join the exhibition.', 'स्टॉल का विवरण पाएँ और महोत्सव से जुड़ें।')],
 ]

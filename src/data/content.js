@@ -15,13 +15,13 @@ export const features = [
 export const facilities = [
   p('Spacious stall & tent areas', 'विशाल स्टॉल व टेंट क्षेत्र'),
   p('Electricity & basic amenities (subject to confirmation)', 'बिजली व मूलभूत सुविधाएँ (पुष्टि के अधीन)'),
-  p('High footfall and exhibition visibility', 'अधिक आगंतुक और प्रदर्शनी में दृश्यता'),
+  p('High footfall and exhibition visibility', 'अधिक आगंतुक और महोत्सव में दृश्यता'),
   p('Support from the event management team', 'आयोजन प्रबंधन टीम का सहयोग'),
 ]
 const ex = [
   [p('Spiritual Discourses', 'आध्यात्मिक प्रवचन'), p('Learn from inspiring talks and life lessons.', 'प्रेरक वार्ताओं और जीवन-शिक्षाओं से सीखें।')],
   [p('Cultural Performances', 'सांस्कृतिक प्रस्तुतियाँ'), p('Bhajans, folk artists and traditional art forms.', 'भजन, लोक कलाकार और पारंपरिक कला रूप।')],
-  [p('Stall Exhibition', 'स्टॉल प्रदर्शनी'), p('Handicrafts, books, organic products, and more.', 'हस्तशिल्प, पुस्तकें, जैविक उत्पाद और बहुत कुछ।')],
+  [p('Stall Exhibition', 'स्टॉल महोत्सव'), p('Handicrafts, books, organic products, and more.', 'हस्तशिल्प, पुस्तकें, जैविक उत्पाद और बहुत कुछ।')],
   [p('Food Court', 'फ़ूड कोर्ट'), p('Traditional and regional cuisines.', 'पारंपरिक और क्षेत्रीय व्यंजन।')],
   [p('Community Connect', 'सामुदायिक मेल-जोल'), p('Meet, network and be part of a larger movement.', 'मिलें, जुड़ें और एक बड़े अभियान का हिस्सा बनें।')],
 ]

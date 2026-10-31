@@ -23,7 +23,7 @@ export const gallery = [
   },
   {
     src: 'https://i.pinimg.com/736x/4a/c2/6b/4ac26bda5717cf895372524296176c57.jpg',
-    alt: p('Exhibition stalls', 'प्रदर्शनी स्टॉल'),
+    alt: p('Exhibition stalls', 'महोत्सव स्टॉल'),
   },
   {
     src: 'https://i.pinimg.com/1200x/c7/b0/f9/c7b0f905e7f9e683a38a5d71dead6cc7.jpg',

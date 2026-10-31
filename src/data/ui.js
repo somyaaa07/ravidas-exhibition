@@ -12,8 +12,8 @@ export const ui = {
     title1: p('Sant Ravidas Jayanti ', 'संत रविदास जयंती'), title2: p('Mahotsav', 'महोत्सव'),
     subtitle: p('Celebrating the Life, Teachings & Timeless Vision of Sant Ravidas Ji', 'संत रविदास जी के जीवन, शिक्षाओं और शाश्वत दृष्टि का उत्सव'),
     intro: p('An inspiring exhibition to pay tribute to the great saint, philosopher and social reformer — whose message of equality, devotion, humanity and social harmony continues to light the way for a better world.',
-      'महान संत, दार्शनिक और समाज सुधारक को श्रद्धांजलि देने वाली एक प्रेरक प्रदर्शनी — जिनका समानता, भक्ति, मानवता और सामाजिक समरसता का संदेश आज भी बेहतर विश्व की राह दिखाता है।'),
-    book: p('Book Your Stall / Tent', 'अपना स्टॉल / टेंट बुक करें'), explore: p('Explore Exhibition', 'प्रदर्शनी देखें'),
+      'महान संत, दार्शनिक और समाज सुधारक को श्रद्धांजलि देने वाली एक प्रेरक महोत्सव — जिनका समानता, भक्ति, मानवता और सामाजिक समरसता का संदेश आज भी बेहतर विश्व की राह दिखाता है।'),
+    book: p('Book Your Stall / Tent', 'अपना स्टॉल / टेंट बुक करें'), explore: p('Explore Exhibition', 'महोत्सव देखें'),
     alt: p('Sant Ravidas Ji seated beside the Ganga ghats of Varanasi', 'वाराणसी के गंगा घाटों के पास विराजमान संत रविदास जी'),
   },
   about: {
@@ -25,7 +25,7 @@ export const ui = {
     alt: p('Portrait of Sant Ravidas Ji', 'संत रविदास जी का चित्र'),
   },
   exhibition: {
-    label: p('THE EXHIBITION', 'प्रदर्शनी'), title: p('About the Exhibition', 'प्रदर्शनी के बारे में'),
+    label: p('THE EXHIBITION', 'महोत्सव'), title: p('About the Exhibition', 'महोत्सव के बारे में'),
     sub: p("A unique platform to celebrate Sant Ravidas Ji's teachings through exhibitions, cultural programs and community participation.",
       'प्रदर्शनियों, सांस्कृतिक कार्यक्रमों और सामुदायिक सहभागिता के माध्यम से संत रविदास जी की शिक्षाओं का उत्सव मनाने का अनूठा मंच।'),
   },
@@ -36,7 +36,7 @@ export const ui = {
   },
   products: {
     label: p('PRODUCT CATALOGUE', 'उत्पाद सूची'), title: p('Handcrafted Products', 'हस्तनिर्मित उत्पाद'),
-    sub: p('A selection of items you can find at the exhibition.', 'प्रदर्शनी में उपलब्ध वस्तुओं का चयन।'),
+    sub: p('A selection of items you can find at the exhibition.', 'महोत्सव में उपलब्ध वस्तुओं का चयन।'),
     all: p('All', 'सभी'), size: p('Size', 'आकार'), weight: p('Weight', 'वजन'), price: p('Price', 'मूल्य'),
     enquire: p('Enquire', 'पूछताछ करें'), note: p('Prices are indicative and may change. Final rates are confirmed at the exhibition.', 'मूल्य सांकेतिक हैं और बदल सकते हैं। अंतिम दरें प्रदर्शनी में तय होंगी।'),
     filter: p('Filter products by category', 'श्रेणी के अनुसार उत्पाद छाँटें'), photo: p('Photo coming soon', 'फोटो जल्द उपलब्ध'),
@@ -52,11 +52,11 @@ export const ui = {
     alt: p('Visitors browsing handicraft stalls under white tents', 'सफेद टेंटों में हस्तशिल्प स्टॉल देखते आगंतुक'),
   },
   expect: {
-    label: p('WHAT TO EXPECT', 'क्या अपेक्षा करें'), title: p('More Than Just an Exhibition', 'केवल एक प्रदर्शनी से कहीं बढ़कर'),
+    label: p('WHAT TO EXPECT', 'क्या अपेक्षा करें'), title: p('More Than Just an Exhibition', 'केवल एक महोत्सव से कहीं बढ़कर'),
     sub: p('A well-organized event with something for everyone.', 'सुव्यवस्थित आयोजन, जिसमें हर किसी के लिए कुछ न कुछ है।'),
   },
   gallery: {
-    title: p('Exhibition Experience', 'प्रदर्शनी अनुभव'),
+    title: p('Exhibition Experience', 'महोत्सव अनुभव'),
     sub: p('A glimpse of the devotion, culture and community spirit. (Illustrative images)', 'भक्ति, संस्कृति और सामुदायिक भावना की एक झलक। (चित्र उदाहरण हेतु)'),
     view: p('View Gallery', 'गैलरी देखें'),
   },
@@ -66,7 +66,7 @@ export const ui = {
     quote: p("Let's come together to celebrate the message of Sant Ravidas Ji.", 'आइए, संत रविदास जी के संदेश का उत्सव साथ मिलकर मनाएँ।'),
     alt: p('Varanasi ghats at sunset with boats', 'सूर्यास्त के समय नावों के साथ वाराणसी के घाट'),
   },
-  footer: { tagline: p('Equality | Humanity | Harmony', 'समानता | मानवता | समरसता'), rights: p('© 2026 Sant Ravidas Ji Exhibition. All rights reserved.', '© 2025 संत रविदास जी प्रदर्शनी। सर्वाधिकार सुरक्षित।') },
+  footer: { tagline: p('Equality | Humanity | Harmony', 'समानता | मानवता | समरसता'), rights: p('© 2026 Sant Ravidas Ji Exhibition. All rights reserved.', '© 2025 संत रविदास जी महोत्सव। सर्वाधिकार सुरक्षित।') },
   reg: {
     label: p('STALL REGISTRATION', 'स्टॉल पंजीकरण'), title: p('Register for Stall / Tent', 'स्टॉल / टेंट के लिए पंजीकरण'),
     sub: p('Three short steps. You can review everything before sending.', 'तीन छोटे चरण। भेजने से पहले सब कुछ जाँच सकते हैं।'),
