@@ -30,8 +30,8 @@ export default function Products() {
           <dl className="mt-4 space-y-1.5 border-t border-border pt-3 text-sm">
             <div className="flex items-center justify-between gap-3"><dt className="flex items-center gap-2 text-muted"><Ruler size={14} className="text-secondary" />{t(pr.size)}</dt><dd className="text-right">{t(x.size)}</dd></div>
             <div className="flex items-center justify-between gap-3"><dt className="flex items-center gap-2 text-muted"><Weight size={14} className="text-secondary" />{t(pr.weight)}</dt><dd className="text-right">{t(x.weight)}</dd></div></dl>
-          <div className="mt-auto flex items-end justify-between gap-3 pt-4">
-            <div><p className="text-xs text-muted">{t(pr.price)}</p><p className="font-heading text-2xl text-primary">{rupees(x.price)}</p></div>
+          <div className="mt-auto gap-3 pt-4">
+            
             <a href={`mailto:${event.email}?subject=${encodeURIComponent(t(pr.mailSubject) + ': ' + x.name.en)}`} className="btn btn-ghost !px-4 !py-2"><Mail size={14} />{t(pr.enquire)}</a></div>
         </div></article>))}</div>
     <p className="mt-6 text-center text-xs text-muted">{t(pr.note)}</p>

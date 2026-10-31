@@ -16,7 +16,7 @@ export default function Artisans() {
     <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{artisans.map((x, i) => (
       <Reveal key={x.id} delay={i * .06}><article className="card flex h-full flex-col overflow-hidden">
         <div className="relative aspect-[4/3]"><MediaImage src={/^https?:\/\//.test(x.image || '') ? x.image : artisanImage(x.image)} alt={t(x.name)} icon={Icons[x.icon]} label={t(a.photo)} className='aspect-6/5' />
-          {x.sample && <span className="absolute left-3 top-3 rounded-full bg-surface/90 px-2.5 py-0.5 text-[11px] text-muted">{t(ui.common.sample)}</span>}</div>
+    </div>
         <div className="flex flex-1 flex-col p-5">
           <h3 className="font-heading text-lg text-primary">{t(x.name)}</h3>
           <p className="text-sm text-secondary">{t(x.craft)}</p>

@@ -1,15 +1,15 @@
 // Every fixed piece of website text lives here, grouped by section. Edit English and Hindi side by side.
 import { p } from '../i18n/p'
 export const ui = {
-  meta: { title: p('Sant Ravidas Ji Exhibition | Stall & Tent Booking, Varanasi', 'संत रविदास जी प्रदर्शनी | स्टॉल व टेंट बुकिंग, वाराणसी') },
+  meta: { title: p('Sant Ravidas Jayanti Mahotsav | Stall & Tent Booking, Varanasi', 'संत रविदास जयंती महोत्सव | स्टॉल व टेंट बुकिंग, वाराणसी') },
   common: {
-    brand1: p('Sant Ravidas Ji', 'संत रविदास जी'), brand2: p('Exhibition', 'प्रदर्शनी'),
+    brand1: p('Sant Ravidas Jayanti', 'संत रविदास जयंती'), brand2: p('Exhibition', 'प्रदर्शनी'),
     registerShort: p('Register for Stall', 'स्टॉल पंजीकरण'), optional: p('Optional', 'वैकल्पिक'),
     menu: p('Toggle menu', 'मेनू खोलें / बंद करें'), sample: p('Sample', 'नमूना'),
   },
   hero: {
     tags: p('FAITH  |  EQUALITY  |  HUMANITY', 'आस्था  |  समानता  |  मानवता'),
-    title1: p('Sant Ravidas Ji', 'संत रविदास जी'), title2: p('Exhibition', 'प्रदर्शनी'),
+    title1: p('Sant Ravidas Jayanti ', 'संत रविदास जयंती'), title2: p('Mahotsav', 'महोत्सव'),
     subtitle: p('Celebrating the Life, Teachings & Timeless Vision of Sant Ravidas Ji', 'संत रविदास जी के जीवन, शिक्षाओं और शाश्वत दृष्टि का उत्सव'),
     intro: p('An inspiring exhibition to pay tribute to the great saint, philosopher and social reformer — whose message of equality, devotion, humanity and social harmony continues to light the way for a better world.',
       'महान संत, दार्शनिक और समाज सुधारक को श्रद्धांजलि देने वाली एक प्रेरक प्रदर्शनी — जिनका समानता, भक्ति, मानवता और सामाजिक समरसता का संदेश आज भी बेहतर विश्व की राह दिखाता है।'),
