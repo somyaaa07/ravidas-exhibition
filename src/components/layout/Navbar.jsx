@@ -39,7 +39,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-5 md:gap-4 lg:px-6">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-1 py-3 sm:px-1 md:gap-4 lg:px-1">
          <div className="relative z-10 flex h-14 w-20 shrink-0 items-center">
       <Logo />
     </div>
@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Desktop navigation */}
         <nav
           aria-label="Main"
-          className="hidden items-center gap-3 text-[10px] lg:flex xl:gap-6 xl:text-[13px] ml-12"
+          className="hidden items-center gap-3 text-[10px] lg:flex xl:gap-6 xl:text-[13px] ml-10"
         >
           {navLinks.map(([label, id], i) => (
             <a

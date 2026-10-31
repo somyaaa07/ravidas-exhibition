@@ -15,7 +15,7 @@ export default function Logo({ light }) {
       <img
         src={logo}
         alt="Ravidas Exhibition Logo"
-        className="h-30 w-auto max-w-none object-contain"
+        className="h-30 w-auto  max-w-none object-contain"
       />
     </a>
   )
