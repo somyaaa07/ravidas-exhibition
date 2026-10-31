@@ -38,7 +38,7 @@
 //   </div></section>)
 // }
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Package,
@@ -69,6 +69,9 @@ export default function Products() {
   const [cat, setCat] = useState("all");
   const [page, setPage] = useState(1);
 
+  const gridTopRef = useRef(null);
+  const scrollOnPageChange = useRef(false);
+
   // Filter products by category
   const filteredProducts =
     cat === "all"
@@ -93,6 +96,19 @@ export default function Products() {
     setCat(category);
     setPage(1);
   };
+
+  // Change page and scroll back to the top of the product grid
+  const goToPage = (nextPage) => {
+    if (nextPage === page || nextPage < 1 || nextPage > totalPages) return;
+    scrollOnPageChange.current = true;
+    setPage(nextPage);
+  };
+
+  useEffect(() => {
+    if (!scrollOnPageChange.current) return;
+    scrollOnPageChange.current = false;
+    gridTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [page]);
 
   const chips = [{ id: "all", label: pr.all }, ...productCategories];
 
@@ -144,6 +160,9 @@ export default function Products() {
             </motion.button>
           ))}
         </div>
+
+        {/* Scroll target for pagination */}
+        <div ref={gridTopRef} className="scroll-mt-24" />
 
         {/* Product Count */}
         <motion.div
@@ -272,7 +291,7 @@ export default function Products() {
             <motion.button
               type="button"
               disabled={page === 1}
-              onClick={() => setPage((prev) => prev - 1)}
+              onClick={() => goToPage(page - 1)}
               whileTap={page === 1 ? undefined : { scale: 0.93 }}
               aria-label={t({ en: "Previous", hi: "पिछला" })}
               className="flex h-9 items-center gap-1 rounded-md border border-border px-2.5 text-sm transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:px-3"
@@ -290,7 +309,7 @@ export default function Products() {
                   key={pageNumber}
                   type="button"
                   aria-current={page === pageNumber ? "page" : undefined}
-                  onClick={() => setPage(pageNumber)}
+                  onClick={() => goToPage(pageNumber)}
                   whileTap={{ scale: 0.93 }}
                   className={`h-9 min-w-9 rounded-md border px-2.5 text-sm transition-colors sm:h-10 sm:min-w-10 sm:px-3 ${
                     page === pageNumber
@@ -307,7 +326,7 @@ export default function Products() {
             <motion.button
               type="button"
               disabled={page === totalPages}
-              onClick={() => setPage((prev) => prev + 1)}
+              onClick={() => goToPage(page + 1)}
               whileTap={page === totalPages ? undefined : { scale: 0.93 }}
               aria-label={t({ en: "Next", hi: "अगला" })}
               className="flex h-9 items-center gap-1 rounded-md border border-border px-2.5 text-sm transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-40 sm:h-10 sm:px-3"
